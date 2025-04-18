@@ -458,9 +458,8 @@ export default function UniriseHomePage() {
           </motion.div>
         </div>
       </section>
-      {/* Registration Section */}  
-
-       <section 
+      {/* Registration Section */}
+      <section 
         ref={formRef}
         className="py-24 bg-gradient-to-b from-yellow-400 to-yellow-500 text-black"
         id="register"
@@ -610,6 +609,7 @@ export default function UniriseHomePage() {
           </motion.div>
         </div>
       </section>
+
       {/* Testimonials Section */}
       <section className="py-24 bg-black">
         <div className="container mx-auto px-4">
