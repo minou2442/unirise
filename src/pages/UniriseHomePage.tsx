@@ -12,7 +12,7 @@ import rayan from '../assets/rayan.jpg';
 import v1 from '../assets/v1.jpg';
 import v2 from '../assets/v2.jpg';
 import v3 from '../assets/v3.jpg';
-import v3 from '../assets/v3.jpg';
+import { supabase, Registration } from "../lib/supabase";
 
 interface TeamMember {
   name: string;
@@ -27,10 +27,25 @@ interface EventPhoto {
 }
 
 export default function UniriseHomePage() {
-  const { register, handleSubmit, reset } = useForm();
-  const onSubmit = (data: any) => {
-    alert("Registration submitted!\n" + JSON.stringify(data));
-    reset();
+  const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm<Registration>();
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const onSubmit = async (data: Registration) => {
+    try {
+      const { error } = await supabase
+        .from('registrations')
+        .insert([data]);
+
+      if (error) throw error;
+
+      setSubmitStatus('success');
+      reset();
+      setTimeout(() => setSubmitStatus('idle'), 3000);
+    } catch (error) {
+      console.error('Error submitting registration:', error);
+      setSubmitStatus('error');
+      setTimeout(() => setSubmitStatus('idle'), 3000);
+    }
   };
 
   const [heroRef, heroInView] = useInView({
