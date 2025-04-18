@@ -15,7 +15,7 @@ import v3 from '../assets/v3.jpg';
 import { supabase, Registration } from "../lib/supabase";
 import vidd from'../assets/vidd.mp4';
 import v4 from '../assets/v4.jpg';
-import v5 from '../assets/v5.jpg';
+import v5 from '../assets/v5.png';
 interface TeamMember {
   name: string;
   role: string;
