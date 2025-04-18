@@ -492,7 +492,7 @@ export default function UniriseHomePage() {
             <motion.div variants={fadeInUpVariants} className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Next Event</h2>
               <p className="text-black/80 max-w-2xl mx-auto">
-                Register now to secure your spot at our upcoming educational workshop. Get personalized guidance and connect with experienced students.
+                Register now to secure your spot at our upcoming educational event. Get personalized guidance and connect with experienced students.
               </p>
             </motion.div>
             
