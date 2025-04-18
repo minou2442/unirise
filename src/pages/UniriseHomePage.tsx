@@ -126,19 +126,7 @@ export default function UniriseHomePage() {
       image: niss
     },
   ];
-{/* Video Section */}
-<div className="my-6">
-  <div className="relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl">
-    <video
-      className="w-full"
-      controls
-      poster= { v1 }// Optional preview image
-    >
-      <source src= {vidd} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
+
  const eventPhotos: EventPhoto[] = [
     { 
       src: v1, 
@@ -350,6 +338,19 @@ export default function UniriseHomePage() {
         className="py-24 bg-gradient-to-b from-gray-900 to-black"
         id="event"
       >
+        {/* Event Video */}
+<div className="mb-10">
+  <div className="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
+    <video
+      className="w-full"
+      controls
+      poster={v1}
+    >
+      <source src={vidd} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
