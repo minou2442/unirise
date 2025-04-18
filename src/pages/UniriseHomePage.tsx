@@ -132,9 +132,9 @@ export default function UniriseHomePage() {
     <video
       className="w-full"
       controls
-      poster="/v1.jpg" // Optional preview image
+      poster= v1 // Optional preview image
     >
-      <source src=vidd type="video/mp4" />
+      <source src= {vidd} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
