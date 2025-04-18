@@ -12,6 +12,7 @@ import rayan from '../assets/rayan.jpg';
 import v1 from '../assets/v1.jpg';
 import v2 from '../assets/v2.jpg';
 import v3 from '../assets/v3.jpg';
+import v3 from '../assets/v3.jpg';
 
 interface TeamMember {
   name: string;
