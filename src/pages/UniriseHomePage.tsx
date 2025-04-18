@@ -81,12 +81,12 @@ export default function UniriseHomePage() {
     },
     { 
       name: "DOHA BOUALI", 
-      role: "Co-Founder", 
+      role: "Vice president", 
       desc: "Math Student at NHSM",
      image: doha  },
     { 
       name: "AYMEN BOUMEZBEUR", 
-      role: "IT Developer", 
+      role: "Information technology lead", 
       desc: "Computer Science Student",
       image: me
     },
@@ -98,7 +98,7 @@ export default function UniriseHomePage() {
     },
     { 
       name: "OUMEIMA BOULTIF", 
-      role: "Designer, Video editor", 
+      role: "Multi-media lead", 
       desc: "Civil Engineering Student",
       image:oum
     },
