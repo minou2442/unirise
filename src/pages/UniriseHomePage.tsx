@@ -593,7 +593,7 @@ export default function UniriseHomePage() {
                       <Calendar className="w-6 h-6 text-yellow-400 mt-1 mr-4" />
                       <div>
                         <h4 className="font-medium">Date & Time</h4>
-                        <p className="text-gray-300">August 15, 2024 • 10:00 AM - 3:00 PM</p>
+                        <p className="text-gray-300">maybe in july :) , 2025 • 10:00 AM - 3:00 PM</p>
                       </div>
                     </div>
                     
@@ -601,7 +601,7 @@ export default function UniriseHomePage() {
                       <MapPin className="w-6 h-6 text-yellow-400 mt-1 mr-4" />
                       <div>
                         <h4 className="font-medium">Location</h4>
-                        <p className="text-gray-300">Mohammed Seddik Ben Yahya High School, El Milia, Jijel</p>
+                        <p className="text-gray-300">(not confirmed yet ) El Milia, Jijel</p>
                       </div>
                     </div>
                     
