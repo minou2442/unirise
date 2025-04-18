@@ -458,9 +458,9 @@ export default function UniriseHomePage() {
           </motion.div>
         </div>
       </section>
+      {/* Registration Section */}  
 
-      {/* Registration Section */}
-      <section 
+       <section 
         ref={formRef}
         className="py-24 bg-gradient-to-b from-yellow-400 to-yellow-500 text-black"
         id="register"
@@ -521,7 +521,7 @@ export default function UniriseHomePage() {
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-1">Current Educational Level</label>
                       <select 
-                        {...register("educationLevel")} 
+                        {...register("education_level")} 
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all"
                         required
                       >
@@ -545,10 +545,27 @@ export default function UniriseHomePage() {
                     
                     <button 
                       type="submit"
-                      className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:shadow-lg"
+                      disabled={isSubmitting}
+                      className={`w-full font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:shadow-lg ${
+                        isSubmitting 
+                          ? 'bg-gray-400 cursor-not-allowed' 
+                          : 'bg-yellow-400 hover:bg-yellow-500 text-black'
+                      }`}
                     >
-                      Register for Event
+                      {isSubmitting ? 'Registering...' : 'Register for Event'}
                     </button>
+
+                    {submitStatus === 'success' && (
+                      <div className="text-green-600 text-center mt-4">
+                        Registration successful! We'll contact you soon.
+                      </div>
+                    )}
+
+                    {submitStatus === 'error' && (
+                      <div className="text-red-600 text-center mt-4">
+                        There was an error submitting your registration. Please try again.
+                      </div>
+                    )}
                   </form>
                 </div>
                 
@@ -559,7 +576,7 @@ export default function UniriseHomePage() {
                       <Calendar className="w-6 h-6 text-yellow-400 mt-1 mr-4" />
                       <div>
                         <h4 className="font-medium">Date & Time</h4>
-                        <p className="text-gray-300">july maybe haha, 2024 • 9:00 AM - 3:00 PM</p>
+                        <p className="text-gray-300">August 15, 2024 • 10:00 AM - 3:00 PM</p>
                       </div>
                     </div>
                     
@@ -567,7 +584,7 @@ export default function UniriseHomePage() {
                       <MapPin className="w-6 h-6 text-yellow-400 mt-1 mr-4" />
                       <div>
                         <h4 className="font-medium">Location</h4>
-                        <p className="text-gray-300">idk lsl in  El Milia, Jijel</p>
+                        <p className="text-gray-300">Mohammed Seddik Ben Yahya High School, El Milia, Jijel</p>
                       </div>
                     </div>
                     
@@ -593,7 +610,6 @@ export default function UniriseHomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-24 bg-black">
         <div className="container mx-auto px-4">
