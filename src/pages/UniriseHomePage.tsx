@@ -74,36 +74,36 @@ export default function UniriseHomePage() {
 
   const teamMembers: TeamMember[] = [
     { 
-      name: "Rayan Zebiri", 
-      role: "Founder", 
+      name: "RAYAN ZEBIRI", 
+      role: "President,Founder", 
       desc: "Law student",
       image: rayan
     },
     { 
-      name: "Doha Bouali", 
+      name: "DOHA BOUALI", 
       role: "Co-Founder", 
       desc: "Math Student at NHSM",
      image: doha  },
     { 
-      name: "Aymen Boumezbeur", 
+      name: "AYMEN BOUMEZBEUR", 
       role: "IT Developer", 
       desc: "Computer Science Student",
       image: me
     },
     { 
-      name: "Aguis Meriem Aya", 
-      role: "External Relations", 
+      name: "AGUIS MARIEM AYA", 
+      role: "External Relations lead", 
       desc: "Marketing student",
       image: mariam
     },
     { 
-      name: "Oumeima Boultif", 
+      name: "OUMEIMA BOULTIF", 
       role: "Designer, Video editor", 
       desc: "Civil Engineering Student",
       image:oum
     },
     { 
-      name: "Anis Zaimen", 
+      name: "ANIS ZAIMEN", 
       role: "Graphic Designer", 
       desc: "Electronics Student",
       image: niss
@@ -246,7 +246,7 @@ export default function UniriseHomePage() {
             >
               <div className="space-y-6">
                 <p className="text-gray-300">
-                  Unirise El-Milia is an initiative organized by a group of passionate university students aiming to guide high school graduates and new university students in their academic journey.
+                  Unirise is an initiative organized by a group of passionate university students aiming to guide high school graduates and new university students in their academic journey.
                 </p>
                 <p className="text-gray-300">
                   Located in El Milia, Jijel, we aim to provide consultations, support, and advice to help students choose the right specializations and adapt to university life.
@@ -348,20 +348,20 @@ export default function UniriseHomePage() {
             >
               <div>
                 <h3 className="text-2xl font-bold mb-4">
-                  Educational Workshop at Mohammed Seddik Ben Yahya High School
+                  Educational Event at Mohammed Seddik Ben Yahya High School
                 </h3>
                 <p className="text-gray-300 mb-6">
                   Our flagship event brought together experienced university students who shared valuable insights to help guide new students in making informed decisions about their academic future.
                 </p>
                 <p className="text-gray-300 mb-6">
-                  The workshop covered various specializations, university life expectations, and strategies for academic success. Students had the opportunity to ask questions and receive personalized advice.
+                  The Event covered various specializations, university life expectations, and strategies for academic success. Students had the opportunity to ask questions and receive personalized advice.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <div className="bg-yellow-400/20 rounded-full p-2 mr-3">
                       <Calendar className="w-5 h-5 text-yellow-400" />
                     </div>
-                    <span>july 26, 2023</span>
+                    <span>july 26, 2024 </span>
                   </div>
                   <div className="flex items-center">
                     <div className="bg-yellow-400/20 rounded-full p-2 mr-3">
