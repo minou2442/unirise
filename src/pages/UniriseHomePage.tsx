@@ -14,7 +14,8 @@ import v2 from '../assets/v2.jpg';
 import v3 from '../assets/v3.jpg';
 import { supabase, Registration } from "../lib/supabase";
 import vidd from'../assets/vidd.mp4';
-
+import v4 from '../assets/v4.jpg';
+import v5 from '../assets/v5.jpg';
 interface TeamMember {
   name: string;
   role: string;
@@ -655,19 +656,19 @@ export default function UniriseHomePage() {
                 name: "Amel Khaled",
                 role: "Medical Student",
                 quote: "بفضل توجيهات Unirise، خترت الطريق الصح في دراستي فالطب. نصائحهم عاونوني بزاف فالمسيرة الدراسية دياليy.",
-                image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: v4
               },
               {
                 name: "Mohammed Benali",
                 role: "Engineering Student",
                 quote: "ليكيب تاع Unirise فهّمتني واش يلزم للهندسة وورّاو لي كيفاش ندير باش نسجّل",
-                image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: v5
               },
               {
                 name: "Lina Hadj",
                 role: "Computer Science Student",
                 quote: "كنت حاير في الطريق لي نديها بعد الثانوي. حدث Unirise وضح لي الخيارات ديالي وساعدني نختار علوم الكمبيوتر",
-                image: "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: v4
               }
             ].map((testimonial, index) => (
               <div 
