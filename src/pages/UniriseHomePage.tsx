@@ -1,17 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useInView } from "react-intersection-observer";
 import { ChevronDown, Calendar, Users, BookOpen, Award, GraduationCap, MapPin } from "lucide-react";
-import doha from '../assets/doha.jpg';
-import niss from '../assets/niss.jpg';
-import mariam from '../assets/mariem.jpg';
-import oum from '../assets/oum.jpg';
-import me from '../assets/me.jpg';
-import rayan from '../assets/rayan.jpg';
-import v1 from '../assets/v1.jpg';
-import v2 from '../assets/v2.jpg';
-import v3 from '../assets/v3.jpg';
 import { supabase, Registration } from "../lib/supabase";
 
 interface TeamMember {
@@ -90,60 +81,61 @@ export default function UniriseHomePage() {
 
   const teamMembers: TeamMember[] = [
     { 
-      name: "RAYAN ZEBIRI", 
-      role: "President,Founder", 
+      name: "Rayan Zebiri", 
+      role: "Founder", 
       desc: "Law student",
-      image: rayan
+      image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600" 
     },
     { 
-      name: "DOHA BOUALI", 
-      role: "Vice president", 
+      name: "Doha Bouali", 
+      role: "Co-Founder", 
       desc: "Math Student at NHSM",
-     image: doha  },
+      image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=600" 
+    },
     { 
-      name: "AYMEN BOUMEZBEUR", 
-      role: "Information technology lead", 
+      name: "Aymen Boumezbeur", 
+      role: "IT Developer", 
       desc: "Computer Science Student",
-      image: me
+      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600" 
     },
     { 
-      name: "AGUIS MARIEM AYA", 
-      role: "External Relations lead", 
+      name: "Aguis Meriem Aya", 
+      role: "External Relations", 
       desc: "Marketing student",
-      image: mariam
+      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600" 
     },
     { 
-      name: "OUMEIMA BOULTIF", 
-      role: "Multi-media lead", 
+      name: "Oumeima Boultif", 
+      role: "Designer, Video editor", 
       desc: "Civil Engineering Student",
-      image:oum
+      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600" 
     },
     { 
-      name: "ANIS ZAIMEN", 
+      name: "Anis Zaimen", 
       role: "Graphic Designer", 
       desc: "Electronics Student",
-      image: niss
+      image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600" 
     },
   ];
 
   const eventPhotos: EventPhoto[] = [
     { 
-      src: v1, 
+      src: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
       alt: "Students during presentation" 
     },
     { 
-      src: v2 ,
+      src: "https://images.pexels.com/photos/1708988/pexels-photo-1708988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
       alt: "Group discussion" 
     },
     { 
-      src: v3,
+      src: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
       alt: "Team collaboration" 
     },
   ];
 
   const stats = [
-    { icon: <Users className="w-8 h-8" />, value: "1000+", label: "Students Advised" },
-    { icon: <Calendar className="w-8 h-8" />, value: "1", label: "Events Organized" },
+    { icon: <Users className="w-8 h-8" />, value: "500+", label: "Students Advised" },
+    { icon: <Calendar className="w-8 h-8" />, value: "10+", label: "Events Organized" },
     { icon: <BookOpen className="w-8 h-8" />, value: "20+", label: "Specializations Covered" },
     { icon: <Award className="w-8 h-8" />, value: "100%", label: "Satisfaction Rate" },
   ];
@@ -262,7 +254,7 @@ export default function UniriseHomePage() {
             >
               <div className="space-y-6">
                 <p className="text-gray-300">
-                  Unirise is an initiative organized by a group of passionate university students aiming to guide high school graduates and new university students in their academic journey.
+                  Unirise El-Milia is an initiative organized by a group of passionate university students aiming to guide high school graduates and new university students in their academic journey.
                 </p>
                 <p className="text-gray-300">
                   Located in El Milia, Jijel, we aim to provide consultations, support, and advice to help students choose the right specializations and adapt to university life.
@@ -364,26 +356,26 @@ export default function UniriseHomePage() {
             >
               <div>
                 <h3 className="text-2xl font-bold mb-4">
-                  Educational Event at Mohammed Seddik Ben Yahya High School
+                  Educational Workshop at Mohammed Seddik Ben Yahya High School
                 </h3>
                 <p className="text-gray-300 mb-6">
                   Our flagship event brought together experienced university students who shared valuable insights to help guide new students in making informed decisions about their academic future.
                 </p>
                 <p className="text-gray-300 mb-6">
-                  The Event covered various specializations, university life expectations, and strategies for academic success. Students had the opportunity to ask questions and receive personalized advice.
+                  The workshop covered various specializations, university life expectations, and strategies for academic success. Students had the opportunity to ask questions and receive personalized advice.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <div className="bg-yellow-400/20 rounded-full p-2 mr-3">
                       <Calendar className="w-5 h-5 text-yellow-400" />
                     </div>
-                    <span>july 26, 2024 </span>
+                    <span>June 15, 2023</span>
                   </div>
                   <div className="flex items-center">
                     <div className="bg-yellow-400/20 rounded-full p-2 mr-3">
                       <Users className="w-5 h-5 text-yellow-400" />
                     </div>
-                    <span>60+ Attendees</span>
+                    <span>120+ Attendees</span>
                   </div>
                 </div>
               </div>
@@ -474,6 +466,7 @@ export default function UniriseHomePage() {
           </motion.div>
         </div>
       </section>
+
       {/* Registration Section */}
       <section 
         ref={formRef}
@@ -626,7 +619,6 @@ export default function UniriseHomePage() {
         </div>
       </section>
 
-
       {/* Testimonials Section */}
       <section className="py-24 bg-black">
         <div className="container mx-auto px-4">
@@ -640,19 +632,19 @@ export default function UniriseHomePage() {
               {
                 name: "Amel Khaled",
                 role: "Medical Student",
-                quote: "بفضل توجيهات Unirise، خترت الطريق الصح في دراستي فالطب. نصائحهم عاونوني بزاف فالمسيرة الدراسية دياليy.",
+                quote: "Thanks to Unirise's guidance, I made the right choice for my medical studies. Their advice was invaluable in my academic journey.",
                 image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600"
               },
               {
                 name: "Mohammed Benali",
                 role: "Engineering Student",
-                quote: "ليكيب تاع Unirise فهّمتني واش يلزم للهندسة وورّاو لي كيفاش ندير باش نسجّل",
+                quote: "The Unirise team helped me understand the requirements for engineering programs and guided me through the application process.",
                 image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600"
               },
               {
                 name: "Lina Hadj",
                 role: "Computer Science Student",
-                quote: "كنت حاير في الطريق لي نديها بعد الثانوي. حدث Unirise وضح لي الخيارات ديالي وساعدني نختار علوم الكمبيوتر",
+                quote: "I was confused about which path to take after high school. Unirise's event clarified my options and helped me choose computer science.",
                 image: "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600"
               }
             ].map((testimonial, index) => (
