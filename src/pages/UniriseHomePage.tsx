@@ -13,7 +13,7 @@ import v1 from '../assets/v1.jpg';
 import v2 from '../assets/v2.jpg';
 import v3 from '../assets/v3.jpg';
 import { supabase, Registration } from "../lib/supabase";
-
+import vidd from'../assets/vidd.mp4';
 
 interface TeamMember {
   name: string;
@@ -126,7 +126,19 @@ export default function UniriseHomePage() {
       image: niss
     },
   ];
-
+{/* Video Section */}
+<div className="my-6">
+  <div className="relative w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-2xl">
+    <video
+      className="w-full"
+      controls
+      poster="/v1.jpg" // Optional preview image
+    >
+      <source src=vidd type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
  const eventPhotos: EventPhoto[] = [
     { 
       src: v1, 
